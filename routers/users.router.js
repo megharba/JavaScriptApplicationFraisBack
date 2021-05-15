@@ -5,17 +5,19 @@ let router = express()
 
 //Recupération données
 router.post('/auth', userController.searchAll)
+//un Utilisateur 
+router.get('/:id', userController.showOneUser)
 
-router.get('/:id', (request, response) => {
-    const id = request.params.id
-    const result = userController.search(id)
-    response.json(result)
-})
-
+// //ShowOneUser
+// router.get('/show/:id',(request, response) => {
+//     const id = request.params.id
+//     const result = userController.showOneUser(id)
+//     response.json(result)
+// })
 //Créer une donnée
 router.post('/new', userController.addUser)
 // Modifier BDD
-router.put('/:id', userController.updateUser)
+// router.put('/:id', userController.updateUser)
 
 
 //Supprimer données

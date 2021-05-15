@@ -68,10 +68,18 @@ const deleteUser = (request, response) => {
         else response.json({result})
     })
     
+    
+}
+const  showOneUser = (request,response) => {
+    userModel.showOneUser(request.params.id,(err, result) => {
+        if (err) response.json(err)
+        response.json({result})
+    })
 }
 module.exports = {
     searchAll,
     addUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    showOneUser
 }
