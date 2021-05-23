@@ -33,11 +33,15 @@ const deleteUser = (id,callback) => {
 const showOneUser = (id,callback)  =>{
     connection.query('SELECT * FROM utilisateur WHERE id=(?)',id, callback)
 }
+const showAllUser = (callback)  =>{
+    connection.query('SELECT * FROM utilisateur', callback)
+}
 
 module.exports = {
     searchAll,
     addUser,
     updateUser,
     deleteUser,
-    showOneUser
+    showOneUser,
+    showAllUser
 }

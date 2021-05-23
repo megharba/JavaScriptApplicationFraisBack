@@ -76,10 +76,17 @@ const  showOneUser = (request,response) => {
         response.json({result})
     })
 }
+const  showAllUser = (request,response) => {
+    userModel.showOneUser((err, result) => {
+        if (err) response.json(err)
+        response.json({result})
+    })
+}
 module.exports = {
     searchAll,
     addUser,
     updateUser,
     deleteUser,
-    showOneUser
+    showOneUser,
+    showAllUser
 }
