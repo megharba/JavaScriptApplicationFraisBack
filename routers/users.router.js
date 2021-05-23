@@ -8,7 +8,7 @@ router.post('/auth', userController.searchAll)
 //un Utilisateur 
 router.get('/:id', userController.showOneUser)
 //les Utilisateur 
-router.get('/:id', userController.showAllUser)
+router.get('/all/:id', userController.showAllUser)
 // //ShowOneUser
 // router.get('/show/:id',(request, response) => {
 //     const id = request.params.id
