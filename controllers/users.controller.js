@@ -77,7 +77,7 @@ const  showOneUser = (request,response) => {
     })
 }
 const  showAllUser = (request,response) => {
-    userModel.showOneUser(request,(err, result) => {
+    userModel.showAllUser(request,(err, result) => {
         if (err) response.json(err)
         response.json({result})
     })
